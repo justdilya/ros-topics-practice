@@ -1,0 +1,5 @@
+<launch>
+    <!-- Статический TF между base_footprint и base_scan -->
+    <node pkg="tf" type="static_transform_publisher" name="base_footprint_2_base_scan" 
+          args="0 0 0.3 0 0 0 base_footprint base_scan 100" />
+</launch>

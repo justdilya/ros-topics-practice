@@ -1,0 +1,4 @@
+<launch>
+    <!-- Запуск симуляции TurtleBot3 -->
+    <include file="$(find turtlebot3_gazebo)/launch/turtlebot3_world.launch" />
+</launch> 
