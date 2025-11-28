@@ -1,0 +1,20 @@
+<launch>
+    <!-- Arguments -->
+    <arg name="model" default="waffle" />
+    
+    <!-- Запуск симуляции -->
+    <include file="$(find my_ros_topics)/launch/topic4_sim_controlled.launch">
+        <arg name="rviz" value="false" />
+    </include>
+    
+    <!-- Загрузка сохраненной карты - ИСПРАВЛЕННЫЙ ПУТЬ -->
+    <node pkg="map_server" type="map_server" name="map_server" 
+          args="$(find my_ros_topics)/maps/my_map.yaml" />
+    
+    <!-- Запуск move_base с нашими настройками -->
+    <include file="$(find my_ros_topics)/launch/topic5_move_base.launch" />
+    
+    <!-- Запуск Rviz -->
+    <node pkg="rviz" type="rviz" name="rviz" 
+          args="-d $(find my_ros_topics)/rviz/topic5_navigation.rviz" />
+</launch>

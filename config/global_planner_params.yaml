@@ -1,0 +1,13 @@
+GlobalPlanner:
+  old_navfn_behavior: false
+  use_quadratic: true
+  use_dijkstra: true        # МЕНЯЕМ: true = Dijkstra, false = A*
+  use_grid_path: false      # МЕНЯЕМ: false = плавный путь
+  
+  allow_unknown: true       # Разрешить планирование через неизвестные области
+  
+  default_tolerance: 0.5    # Допуск если цель в препятствии
+  
+  lethal_cost: 253
+  neutral_cost: 50
+  cost_factor: 2.0          # Фактор стоимости

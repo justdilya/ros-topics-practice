@@ -1,0 +1,21 @@
+DWAPlannerROS:
+  # Robot Configuration Parameters - МЕНЯЕМ ЭТИ ПАРАМЕТРЫ
+  max_vel_x: 0.15        # Уменьшили максимальную скорость
+  min_vel_x: -0.1        # Уменьшили скорость назад
+  
+  max_vel_theta: 0.8     # Уменьшили скорость поворота
+  min_vel_theta: 0.4     # Уменьшили минимальную скорость поворота
+
+  # Goal Tolerance Parameters
+  xy_goal_tolerance: 0.1     # Увеличили допуск по позиции
+  yaw_goal_tolerance: 0.3    # Увеличили допуск по ориентации
+
+  # Forward Simulation Parameters
+  sim_time: 1.5          # Уменьшили время симуляции
+  vx_samples: 10         # Уменьшили количество samples
+  vth_samples: 20        # Уменьшили samples для поворота
+
+  # Trajectory Scoring Parameters
+  path_distance_bias: 25.0   # Уменьшили вес пути
+  goal_distance_bias: 15.0   # Уменьшили вес цели
+  occdist_scale: 0.1         # Увеличили вес препятствий
