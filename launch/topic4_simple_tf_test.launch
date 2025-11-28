@@ -1,0 +1,11 @@
+<launch>
+    <!-- Запуск симуляции -->
+    <include file="$(find turtlebot3_gazebo)/launch/turtlebot3_world.launch" />
+    
+    <!-- Запуск gmapping -->
+    <node pkg="gmapping" type="slam_gmapping" name="gmapping">
+        <param name="base_frame" value="base_footprint" />
+        <param name="linearUpdate" value="0.5" />
+        <param name="angularUpdate" value="0.3" />
+    </node>
+</launch>
