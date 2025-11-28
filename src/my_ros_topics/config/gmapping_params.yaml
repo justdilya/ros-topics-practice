@@ -1,0 +1,10 @@
+# Параметры для gmapping
+base_frame: base_footprint
+map_frame: map
+delta: 0.05
+linearUpdate: 1.0
+angularUpdate: 0.5
+xmin: -10.0
+xmax: 10.0
+ymin: -10.0
+ymax: 10.0

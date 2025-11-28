@@ -1,0 +1,7 @@
+<launch>
+  <node pkg="gmapping" type="slam_gmapping" name="gmapping">
+      <param name="base_frame" value="base_footprint" />
+      <param name="linearUpdate" value="2.0" />
+      <param name="angularUpdate" value="1.0" />
+  </node>
+</launch>

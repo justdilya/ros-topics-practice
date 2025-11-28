@@ -1,0 +1,31 @@
+# Конфиг в стиле TurtleBot3 на основе изученных параметров
+base_frame: base_footprint
+odom_frame: odom
+map_frame: map
+
+# Параметры обновления (оптимальные из TurtleBot3)
+linearUpdate: 0.5
+angularUpdate: 0.436
+temporalUpdate: -1.0
+map_update_interval: 2.0
+
+# Параметры карты
+xmin: -10.0
+ymin: -10.0
+xmax: 10.0
+ymax: 10.0
+delta: 0.05
+
+# Параметры сканирования
+maxUrange: 3.0
+sigma: 0.05
+kernelSize: 1
+lstep: 0.05
+astep: 0.05
+iterations: 5
+lsigma: 0.075
+ogain: 3.0
+
+# Параметры частиц
+particles: 80
+resampleThreshold: 0.5

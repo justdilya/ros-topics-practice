@@ -1,0 +1,15 @@
+<launch>
+    <!-- Запуск симуляции -->
+    <include file="$(find turtlebot3_gazebo)/launch/turtlebot3_world.launch" />
+    
+    <!-- Запуск gmapping с разными настройками -->
+    <node pkg="gmapping" type="slam_gmapping" name="gmapping">
+        <param name="base_frame" value="base_footprint" />
+        <param name="linearUpdate" value="0.5" />
+        <param name="angularUpdate" value="0.3" />
+        <param name="temporalUpdate" value="1.0" />
+    </node>
+    
+    <!-- Запуск управления -->
+    <node pkg="turtlebot3_teleop" type="turtlebot3_teleop_key" name="teleop" output="screen"/>
+</launch>

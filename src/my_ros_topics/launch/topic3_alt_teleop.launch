@@ -1,0 +1,10 @@
+<launch>
+    <!-- Запуск симуляции TurtleBot3 -->
+    <include file="$(find turtlebot3_gazebo)/launch/turtlebot3_world.launch" />
+    
+    <!-- Запуск альтернативного управления с настройкой параметров -->
+    <node pkg="teleop_twist_keyboard" type="teleop_twist_keyboard.py" name="turtlebot3_teleop_keyboard" output="screen">
+        <param name="speed" value="0.4" />
+        <param name="turn" value="0.7" />
+    </node>
+</launch>

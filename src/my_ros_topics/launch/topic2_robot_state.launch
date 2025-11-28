@@ -1,0 +1,12 @@
+<launch>
+    <!-- Запуск симуляции -->
+    <include file="$(find turtlebot3_gazebo)/launch/turtlebot3_world.launch" />
+    
+    <!-- Публикация TF из модели робота -->
+    <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher">
+        <param name="publish_frequency" type="double" value="50.0" />
+    </node>
+    
+    <!-- Запуск Rviz -->
+    <node pkg="rviz" type="rviz" name="rviz" />
+</launch>

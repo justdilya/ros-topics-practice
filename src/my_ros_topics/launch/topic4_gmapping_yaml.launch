@@ -1,0 +1,12 @@
+<launch>
+    <!-- Запуск симуляции TurtleBot3 -->
+    <include file="$(find turtlebot3_gazebo)/launch/turtlebot3_world.launch" />
+    
+    <!-- Запуск gmapping с загрузкой параметров из YAML -->
+    <node pkg="gmapping" type="slam_gmapping" name="gmapping">
+        <rosparam command="load" file="$(find my_ros_topics)/config/gmapping_params.yaml" />
+    </node>
+    
+    <!-- Запуск Rviz -->
+    <node pkg="rviz" type="rviz" name="rviz" args="-d $(find my_ros_topics)/rviz/gmapping.rviz"/>
+</launch>

@@ -1,0 +1,5 @@
+<launch>
+  <node pkg="gmapping" type="slam_gmapping" name="gmapping">
+    <rosparam command="load" file="$(find my_ros_topics)/config/turtlebot3_style_params.yaml" />
+  </node>
+</launch>

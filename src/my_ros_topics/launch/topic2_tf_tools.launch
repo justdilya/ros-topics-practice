@@ -1,0 +1,7 @@
+<launch>
+    <!-- Запуск симуляции -->
+    <include file="$(find turtlebot3_gazebo)/launch/turtlebot3_world.launch" />
+    
+    <!-- Запуск rqt_tf_tree -->
+    <node pkg="rqt_tf_tree" type="rqt_tf_tree" name="rqt_tf_tree" />
+</launch>
